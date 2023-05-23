@@ -27,6 +27,16 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         getPosts()
+        binding.btnGoToSearch.setOnClickListener()
+        {
+            val newIntent = Intent(this@MainActivity , SearchActivity::class.java)
+            startActivity(newIntent);
+        }
+        binding.GotoGengre.setOnClickListener()
+        {
+            val newIntent = Intent(this@MainActivity , GengresActivity::class.java)
+            startActivity(newIntent);
+        }
     }
 
     fun getPosts() {

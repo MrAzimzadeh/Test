@@ -42,6 +42,7 @@ class PostAdapter(list: List<MovieDTO>, val listener: OnItemClickListener) :
         val item = list[position]
         holder.title.setText(list.get(position).original_title)
         holder.overview.setText(list.get(position).overview)
+        holder.release_date.setText(list.get(position).release_date)
         Picasso.get()
             .load("https://image.tmdb.org/t/p/w500/${item.poster_path}" )
             .into(holder.image);
